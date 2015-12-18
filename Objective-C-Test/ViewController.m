@@ -24,6 +24,8 @@
     @[@"public_profile", @"email", @"user_friends"];
     
     loginButton.center = self.view.center;
+    loginButton.loginBehavior = FBSDKLoginBehaviorWeb;
+    
     [self.view addSubview:loginButton];
 
     [FBSDKProfile enableUpdatesOnAccessTokenChange:YES];

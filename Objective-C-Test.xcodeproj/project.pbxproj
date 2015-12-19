@@ -16,6 +16,7 @@
 		30E1CEC51C24046A0082CBBC /* Objective_C_TestTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 30E1CEC41C24046A0082CBBC /* Objective_C_TestTests.m */; };
 		30E1CED11C2406000082CBBC /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30E1CECF1C2406000082CBBC /* FBSDKCoreKit.framework */; };
 		30E1CED21C2406000082CBBC /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30E1CED01C2406000082CBBC /* FBSDKLoginKit.framework */; };
+		30E1CED51C25A39F0082CBBC /* MapController.m in Sources */ = {isa = PBXBuildFile; fileRef = 30E1CED41C25A39F0082CBBC /* MapController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +45,8 @@
 		30E1CEC41C24046A0082CBBC /* Objective_C_TestTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Objective_C_TestTests.m; sourceTree = "<group>"; };
 		30E1CECF1C2406000082CBBC /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = "<group>"; };
 		30E1CED01C2406000082CBBC /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = "<group>"; };
+		30E1CED31C25A39F0082CBBC /* MapController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapController.h; sourceTree = "<group>"; };
+		30E1CED41C25A39F0082CBBC /* MapController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +91,8 @@
 		30E1CEA71C24046A0082CBBC /* Objective-C-Test */ = {
 			isa = PBXGroup;
 			children = (
+				30E1CED31C25A39F0082CBBC /* MapController.h */,
+				30E1CED41C25A39F0082CBBC /* MapController.m */,
 				30E1CEAC1C24046A0082CBBC /* AppDelegate.h */,
 				30E1CEAD1C24046A0082CBBC /* AppDelegate.m */,
 				30E1CEAF1C24046A0082CBBC /* ViewController.h */,
@@ -235,6 +240,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				30E1CED51C25A39F0082CBBC /* MapController.m in Sources */,
 				30E1CEB11C24046A0082CBBC /* ViewController.m in Sources */,
 				30E1CEAE1C24046A0082CBBC /* AppDelegate.m in Sources */,
 				30E1CEAB1C24046A0082CBBC /* main.m in Sources */,
@@ -436,6 +442,7 @@
 				30E1CECA1C24046A0082CBBC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		30E1CECB1C24046A0082CBBC /* Build configuration list for PBXNativeTarget "Objective-C-TestTests" */ = {
 			isa = XCConfigurationList;
@@ -444,6 +451,7 @@
 				30E1CECD1C24046A0082CBBC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

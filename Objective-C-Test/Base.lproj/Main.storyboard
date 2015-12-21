@@ -33,12 +33,21 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F0R-dl-nWh">
-                                <rect key="frame" x="137" y="449" width="46" height="30"/>
+                                <rect key="frame" x="65" y="456" width="46" height="30"/>
                                 <state key="normal" title="Map">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <segue destination="lYe-K5-dRU" kind="presentation" id="4nG-a5-Aow"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XGE-VP-5l7">
+                                <rect key="frame" x="180" y="456" width="65" height="30"/>
+                                <state key="normal" title="QRCode">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="QKu-ZI-Hkn" kind="show" id="rR7-6S-eTh"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -72,6 +81,49 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bEz-1J-uqD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-174" y="439"/>
+        </scene>
+        <!--Code Controller-->
+        <scene sceneID="kqG-gv-NPb">
+            <objects>
+                <viewController id="QKu-ZI-Hkn" customClass="QRCodeController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Zl6-Bt-HWn"/>
+                        <viewControllerLayoutGuide type="bottom" id="de9-bX-RGs"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="XB8-wU-zuy">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IjY-rB-KOJ">
+                                <rect key="frame" x="60" y="20" width="200" height="200"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lXH-UM-6dX">
+                                <rect key="frame" x="137" y="368" width="46" height="30"/>
+                                <state key="normal" title="Scan">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="startScanning:" destination="QKu-ZI-Hkn" eventType="touchUpInside" id="1Mb-Am-O6m"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Output" translatesAutoresizingMaskIntoConstraints="NO" id="NRK-Cs-qCe">
+                                <rect key="frame" x="50" y="256" width="240" height="80"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="resultImageView" destination="IjY-rB-KOJ" id="icf-Hw-6ii"/>
+                        <outlet property="resultTextView" destination="NRK-Cs-qCe" id="bMi-17-G3P"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Q8H-CK-cVO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-103" y="1124"/>
         </scene>
         <!--Map-->
         <scene sceneID="Y9j-cX-ROb">

@@ -9,7 +9,6 @@
 #ifndef fbLogin_MapController_h
 #define fbLogin_MapController_h
 
-
 #endif
 
 #import <MapKit/MapKit.h>
@@ -20,12 +19,6 @@
     <MKMapViewDelegate, CLLocationManagerDelegate> {
         MKMapView *map;
         CLLocationManager *locationManager;
-        
-        
-        
-        
     }
-
-
 
 @end

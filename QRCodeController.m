@@ -14,7 +14,7 @@
 @implementation QRCodeController
 
 @synthesize resultImageView;
-@synthesize resultTextView;
+@synthesize resultLabel;
 
 - (void)viewDidLoad
 {
@@ -29,7 +29,7 @@
 
 - (IBAction)startScanning:(id)sender {
 
-    resultTextView.text = @"Scanning..";
+    resultLabel.text = @"Scanning..";
     
     ZBarReaderViewController *codeReader = [ZBarReaderViewController new];
     codeReader.readerDelegate=self;
@@ -53,7 +53,7 @@
         break;
     
     // showing the result on textview
-    resultTextView.text = symbol.data;
+    resultLabel.text = symbol.data;
     
     resultImageView.image = [info objectForKey: UIImagePickerControllerOriginalImage];
     

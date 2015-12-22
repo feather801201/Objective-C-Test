@@ -17,13 +17,13 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="17o-Ra-pV9">
-                                <rect key="frame" x="42" y="370" width="123" height="21"/>
+                                <rect key="frame" x="42" y="337" width="123" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Email" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fiq-u5-e1u">
-                                <rect key="frame" x="42" y="408" width="109" height="21"/>
+                                <rect key="frame" x="42" y="375" width="109" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
@@ -33,7 +33,7 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F0R-dl-nWh">
-                                <rect key="frame" x="65" y="456" width="46" height="30"/>
+                                <rect key="frame" x="65" y="416" width="46" height="30"/>
                                 <state key="normal" title="Map">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -42,12 +42,12 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XGE-VP-5l7">
-                                <rect key="frame" x="180" y="456" width="65" height="30"/>
+                                <rect key="frame" x="180" y="416" width="65" height="30"/>
                                 <state key="normal" title="QRCode">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="QKu-ZI-Hkn" kind="show" id="rR7-6S-eTh"/>
+                                    <segue destination="QKu-ZI-Hkn" kind="presentation" id="rR7-6S-eTh"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -63,11 +63,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-553" y="577"/>
+            <point key="canvasLocation" x="-639" y="361"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Zb4-5y-rUt">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bEz-1J-uqD" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController id="lYe-K5-dRU" sceneMemberID="viewController">
                     <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="bk4-vN-ZGZ">
@@ -75,12 +76,11 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="lwG-sV-h0M" kind="relationship" relationship="rootViewController" id="RtA-co-Yg8"/>
+                        <segue destination="lwG-sV-h0M" kind="relationship" relationship="rootViewController" id="k3a-60-wTm"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="bEz-1J-uqD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-174" y="439"/>
+            <point key="canvasLocation" x="-282" y="449"/>
         </scene>
         <!--Code Controller-->
         <scene sceneID="kqG-gv-NPb">
@@ -95,10 +95,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IjY-rB-KOJ">
-                                <rect key="frame" x="60" y="20" width="200" height="200"/>
+                                <rect key="frame" x="60" y="116" width="200" height="200"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lXH-UM-6dX">
-                                <rect key="frame" x="137" y="368" width="46" height="30"/>
+                                <rect key="frame" x="75" y="418" width="46" height="30"/>
                                 <state key="normal" title="Scan">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -106,24 +106,117 @@
                                     <action selector="startScanning:" destination="QKu-ZI-Hkn" eventType="touchUpInside" id="1Mb-Am-O6m"/>
                                 </connections>
                             </button>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Output" translatesAutoresizingMaskIntoConstraints="NO" id="NRK-Cs-qCe">
-                                <rect key="frame" x="50" y="256" width="240" height="80"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8td-sk-dAz">
+                                <rect key="frame" x="0.0" y="20" width="320" height="44"/>
+                                <items>
+                                    <navigationItem title="QRCode" id="7Cc-ld-i3L">
+                                        <barButtonItem key="leftBarButtonItem" title="back" id="2hS-je-2c2">
+                                            <connections>
+                                                <segue destination="vXZ-lx-hvc" kind="presentation" id="bGR-bJ-BU8"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9j6-oy-z9x">
+                                <rect key="frame" x="168" y="418" width="80" height="30"/>
+                                <state key="normal" title="Generator">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="Ftm-o1-42Q" kind="presentation" id="xwE-Ur-B35"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q3g-AC-MIQ">
+                                <rect key="frame" x="36" y="360" width="224" height="50"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <navigationItem key="navigationItem" id="yvx-e3-jwl"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
                         <outlet property="resultImageView" destination="IjY-rB-KOJ" id="icf-Hw-6ii"/>
-                        <outlet property="resultTextView" destination="NRK-Cs-qCe" id="bMi-17-G3P"/>
+                        <outlet property="resultLabel" destination="Q3g-AC-MIQ" id="IIC-Nu-O5W"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Q8H-CK-cVO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-103" y="1124"/>
+            <point key="canvasLocation" x="-644" y="1076"/>
+        </scene>
+        <!--GenQR Code Controller-->
+        <scene sceneID="meh-tu-OzD">
+            <objects>
+                <viewController id="Ftm-o1-42Q" customClass="GenQRCodeController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="SqO-1H-pUh"/>
+                        <viewControllerLayoutGuide type="bottom" id="2XK-Ct-NAL"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="e2Q-8X-X6b" customClass="UIControl">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BwA-KR-xUh">
+                                <rect key="frame" x="0.0" y="20" width="320" height="44"/>
+                                <items>
+                                    <navigationItem title="GenQRCode" id="vMV-C6-xkG">
+                                        <barButtonItem key="leftBarButtonItem" title="back" id="xVj-4R-8Bf">
+                                            <connections>
+                                                <segue destination="QKu-ZI-Hkn" kind="presentation" id="yDh-vC-zcW"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="K27-XA-Xfu">
+                                <rect key="frame" x="60" y="87" width="200" height="200"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P7J-Xr-aE1">
+                                <rect key="frame" x="115" y="377" width="91" height="30"/>
+                                <state key="normal" title="Generate">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="generateButton:" destination="Ftm-o1-42Q" eventType="touchUpInside" id="RWc-tc-EDO"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cdP-Tc-r5Z">
+                                <rect key="frame" x="137" y="405" width="46" height="30"/>
+                                <state key="normal" title="Clear">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="clearButton:" destination="Ftm-o1-42Q" eventType="touchUpInside" id="Uih-lG-J9q"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="l6p-Vk-VRr">
+                                <rect key="frame" x="60" y="312" width="200" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="Ftm-o1-42Q" id="Lfp-Nz-ha7"/>
+                                </connections>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <connections>
+                            <action selector="onBackgroungHit:" destination="Ftm-o1-42Q" eventType="touchUpInside" id="paD-LC-OKE"/>
+                        </connections>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="clearButton" destination="cdP-Tc-r5Z" id="3d8-eh-tWE"/>
+                        <outlet property="generateButton" destination="P7J-Xr-aE1" id="Rs4-Lv-AdH"/>
+                        <outlet property="generateTextField" destination="l6p-Vk-VRr" id="0HR-Vw-kkr"/>
+                        <outlet property="imgView" destination="K27-XA-Xfu" id="mzB-Eg-MGv"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DPy-GO-Pcs" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-196" y="1090"/>
         </scene>
         <!--Map-->
         <scene sceneID="Y9j-cX-ROb">
@@ -149,7 +242,11 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KUd-m0-6XG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="216" y="444"/>
+            <point key="canvasLocation" x="101" y="361"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="yDh-vC-zcW"/>
+        <segue reference="bGR-bJ-BU8"/>
+    </inferredMetricsTieBreakers>
 </document>

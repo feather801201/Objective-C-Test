@@ -13,7 +13,7 @@
 
     @property (weak, nonatomic) IBOutlet UIImageView *resultImageView;
 
-    @property (weak, nonatomic) IBOutlet UITextView *resultTextView;
+    @property (strong, nonatomic) IBOutlet UILabel *resultLabel;
                                                     
     - (IBAction)startScanning:(id)sender;
 
